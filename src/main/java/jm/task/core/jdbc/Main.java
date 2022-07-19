@@ -11,7 +11,6 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws ClassNotFoundException {
-
         UserDaoHibernateImpl userdao = new UserDaoHibernateImpl();
 
         userdao.createUsersTable();
@@ -23,10 +22,7 @@ public class Main {
         for (User user: userdao.getAllUsers()) {
             System.out.println(user.toString());
         }
-
         userdao.cleanUsersTable();
         userdao.dropUsersTable();
-
-
     }
 }
