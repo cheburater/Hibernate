@@ -138,6 +138,7 @@ public class UserDaoHibernateImpl implements UserDao {
                 session.delete(user);
             }
             session.getTransaction().commit();
+            logger.log(Level.INFO, "Таблица очищена");
         } catch (Exception exception) {
             if (session != null) {
                 session.getTransaction().rollback();
